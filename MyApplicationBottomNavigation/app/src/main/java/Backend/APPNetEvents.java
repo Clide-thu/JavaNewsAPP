@@ -27,14 +27,17 @@ public class APPNetEvents {
     //refresh via new APPNetEvents
     public APPNetEvents(Context context){
         database = new APPSQLHelper(context).getWritableDatabase();
-        synchronized (APPSQLHelper.class){
-            database.delete(APPSQLHelper.EVENTS_TABLE,"watched=?",new String[]{"0"});
-        }
     }
 
     public int deleteRecord(){
         synchronized (APPSQLHelper.class){
             return database.delete(APPSQLHelper.EVENTS_TABLE,"watched=?",new String[]{"1"});
+        }
+    }
+
+    public int deleteCached(){
+        synchronized (APPSQLHelper.class){
+            return database.delete(APPSQLHelper.EVENTS_TABLE,"watched=?",new String[]{"0"});
         }
     }
 
@@ -119,19 +122,22 @@ public class APPNetEvents {
     }
 
     //please run in thread
-    public ArrayList<APPEvent> getPaperMore(){
-        return getEventsWithParameter("paper", ++paperPage, 10);
+    public synchronized ArrayList<APPEvent> getMore(String type) {
+        if(type.equals("news")){
+            return getEventsWithParameter(type, ++newsPage, 10);
+        }else if(type.equals("paper")){
+            return getEventsWithParameter(type, ++paperPage, 10);
+        }
+        return getEventsWithParameter(type, 1, 10);
     }
-    //please run in thread
-    public ArrayList<APPEvent> getNewsMore(){
-        return getEventsWithParameter("news", ++newsPage, 10);
-    }
+
     //all 1 20
     private ArrayList<APPEvent> getEventsWithParameter(String type, int page, int size){
         HttpURLConnection conn;
         ArrayList<APPEvent> tmpList = new ArrayList<>();
         try {
             URL tmpGet = new URL(eventsURL+"?type="+type+"&page="+page+"&size="+size);
+            System.out.println(eventsURL+"?type="+type+"&page="+page+"&size="+size);
             conn = (HttpURLConnection)tmpGet.openConnection();
             conn.setConnectTimeout(5*1000);
             conn.setReadTimeout(3*1000);

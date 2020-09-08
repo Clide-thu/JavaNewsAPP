@@ -63,12 +63,12 @@ public class APPNetEpidemicData {
         }
     }
 
-    private LinkedHashMap<String, APPNetEpidemicData> getDataOfChina(){
+    public LinkedHashMap<String, APPNetEpidemicData> getDataOfChina(){
         fetchData();
         return (LinkedHashMap<String, APPNetEpidemicData>) dataOfChina.clone();
     }
 
-    private LinkedHashMap<String, APPNetEpidemicData> getDataOfWorld(){
+    public LinkedHashMap<String, APPNetEpidemicData> getDataOfWorld(){
         fetchData();
         return (LinkedHashMap<String, APPNetEpidemicData>) dataOfWorld.clone();
     }
