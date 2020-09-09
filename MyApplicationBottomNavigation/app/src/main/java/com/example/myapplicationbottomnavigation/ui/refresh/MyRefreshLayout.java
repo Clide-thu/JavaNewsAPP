@@ -2,6 +2,7 @@ package com.example.myapplicationbottomnavigation.ui.refresh;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.View;
@@ -12,16 +13,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
+import com.example.myapplicationbottomnavigation.MainActivity;
+import com.example.myapplicationbottomnavigation.NewsActivity;
 import com.example.myapplicationbottomnavigation.R;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
 import Backend.APPEvent;
 import Backend.APPNetEvents;
@@ -35,6 +33,7 @@ public class MyRefreshLayout extends SwipeRefreshLayout implements ListView.OnSc
 
     public MyRefreshLayout(@NonNull Context context, String type) {
         super(context);
+        System.out.println("renew MyRefreshLayout");
         this.type = type;
         adapter = new APPEventAdapter(getContext(), R.layout.event_show, events);
         inflate(context, R.layout.myrefresh_layout, this);
@@ -48,7 +47,9 @@ public class MyRefreshLayout extends SwipeRefreshLayout implements ListView.OnSc
                 APPEvent tmpEvent = events.get(i);
                 tmpEvent.setWatched();
                 adapter.notifyDataSetChanged();
-                Toast.makeText(getContext(),tmpEvent.get_id(),Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getContext(), NewsActivity.class);
+                intent.putExtra("_id",tmpEvent.get_id());
+                getContext().startActivity(intent);
             }
         });
         setOnRefreshListener(new OnRefreshListener() {
@@ -63,11 +64,39 @@ public class MyRefreshLayout extends SwipeRefreshLayout implements ListView.OnSc
                 }
             }
         });
+        getOrigin();
+    }
+
+
+
+    public void cache(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                eventService.cacheEvents(events, type);
+            }
+        }).start();
+    }
+
+    public void getOrigin(){
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                events.clear();
+                events.addAll(eventService.getOriginEvents(type));
+                new Handler(Looper.getMainLooper()).post(new Runnable() {
+                    @Override
+                    public void run() {
+                        adapter.notifyDataSetChanged();
+                    }
+                });
+            }
+        }).start();
     }
 
     @Override
     public void onScrollStateChanged(AbsListView absListView, int i) {
-        if(listView.getLastVisiblePosition()==listView.getAdapter().getCount()-1){
+        if(listView.getLastVisiblePosition()==listView.getAdapter().getCount()-1 && !isRefreshing()){
             Toast.makeText(getContext(),"load more",Toast.LENGTH_SHORT).show();
             loadMore();
         }
@@ -75,8 +104,10 @@ public class MyRefreshLayout extends SwipeRefreshLayout implements ListView.OnSc
 
     @Override
     public void onScroll(AbsListView absListView, int i, int i1, int i2) {
-        setEnabled(listView.getFirstVisiblePosition()==0);
+        setEnabled(listView.getChildCount()==0||(listView.getFirstVisiblePosition()==0 && listView.getChildAt(0).getTop()==0));
     }
+
+
 
     private void loadMore(){
         synchronized(this){
@@ -100,19 +131,14 @@ public class MyRefreshLayout extends SwipeRefreshLayout implements ListView.OnSc
                     new Handler(Looper.getMainLooper()).post(new Runnable() {
                         @Override
                         public void run() {
-
-                            System.out.println("start");
-//                        adapter.addAll(tmpList);
                             adapter.notifyDataSetChanged();
-                            System.out.println("end");
-
                         }
                     });
 
                 }
             }.start();
         }
-
+        cache();
     }
 
 

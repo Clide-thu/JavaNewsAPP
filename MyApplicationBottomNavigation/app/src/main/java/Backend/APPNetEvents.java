@@ -29,22 +29,18 @@ public class APPNetEvents {
         database = new APPSQLHelper(context).getWritableDatabase();
     }
 
-    public int deleteRecord(){
-        synchronized (APPSQLHelper.class){
-            return database.delete(APPSQLHelper.EVENTS_TABLE,"watched=?",new String[]{"1"});
-        }
+    public synchronized int deleteRecord(){
+        return database.delete(APPSQLHelper.RECORD_TABLE,null,null);
     }
 
-    public int deleteCached(){
-        synchronized (APPSQLHelper.class){
-            return database.delete(APPSQLHelper.EVENTS_TABLE,"watched=?",new String[]{"0"});
-        }
+    public synchronized int deleteCached(String type){
+        return database.delete(APPSQLHelper.CACHE_TABLE,"type=?",new String[]{type});
     }
 
     //please run in thread
     public ArrayList<APPEvent> getEventRecord(){
         try {
-            Cursor cursor = database.query(APPSQLHelper.EVENTS_TABLE,new String[]{"json"},"watched=?",new String[]{"1"},null,null,"id desc");
+            Cursor cursor = database.query(APPSQLHelper.RECORD_TABLE,new String[]{"json"},null,null,null,null,"id desc");
             ArrayList<APPEvent> tmplist = new ArrayList<>();
             while(cursor.moveToNext()){
                 tmplist.add(APPEvent.GetRecordFromJson(new JSONObject(cursor.getString(0))));
@@ -58,21 +54,29 @@ public class APPNetEvents {
 
     //please run in thread
     public APPEvent getEventBy_id(String _id){
-        Cursor cursor = database.query(APPSQLHelper.EVENTS_TABLE,new String[]{"json"},"_id=?",new String[]{_id},null,null,null);
+        Cursor cursor = database.query(APPSQLHelper.RECORD_TABLE,new String[]{"json"},"_id=?",new String[]{_id},null,null,null);
         try {
             if(cursor.moveToNext()){
                 JSONObject tmpJs = new JSONObject(cursor.getString(0));
-                ContentValues contentValues = new ContentValues();
-                contentValues.put("_id",tmpJs.getString("_id"));
-                contentValues.put("json",tmpJs.toString());
-                contentValues.put("watched",1);
-                synchronized (APPSQLHelper.class) {
-                    database.insertWithOnConflict(APPSQLHelper.EVENTS_TABLE, null, contentValues,SQLiteDatabase.CONFLICT_IGNORE);
-                }
                 return APPEvent.GetRecordFromJson(tmpJs);
             }else{
+                cursor = database.query(APPSQLHelper.CACHE_TABLE,new String[]{"json"},"_id=?",new String[]{_id},null,null,null);
+                if(cursor.moveToNext()) {
+                    JSONObject tmpJs = new JSONObject(cursor.getString(0));
+
+                    ContentValues contentValues = new ContentValues();
+                    contentValues.put("_id",tmpJs.getString("_id"));
+                    contentValues.put("json",tmpJs.toString());
+                    contentValues.put("type",tmpJs.getString("type"));
+                    synchronized (this) {
+                        database.insertWithOnConflict(APPSQLHelper.RECORD_TABLE, null, contentValues,SQLiteDatabase.CONFLICT_IGNORE);
+                    }
+
+                    return APPEvent.GetRecordFromJson(tmpJs);
+                }
                 HttpURLConnection conn;
                 URL tmpGet = new URL(eventsURLBy_id+"/"+_id);
+                System.out.println(tmpGet.toString());
                 conn = (HttpURLConnection)tmpGet.openConnection();
                 conn.setConnectTimeout(5*1000);
                 conn.setReadTimeout(3*1000);
@@ -87,9 +91,9 @@ public class APPNetEvents {
                 ContentValues contentValues = new ContentValues();
                 contentValues.put("_id",tmpJs.getString("_id"));
                 contentValues.put("json",tmpJs.toString());
-                contentValues.put("watched",1);
-                synchronized (APPSQLHelper.class) {
-                    database.insertWithOnConflict(APPSQLHelper.EVENTS_TABLE, null, contentValues,SQLiteDatabase.CONFLICT_IGNORE);
+                contentValues.put("type",tmpJs.getString("type"));
+                synchronized (this) {
+                    database.insertWithOnConflict(APPSQLHelper.RECORD_TABLE, null, contentValues,SQLiteDatabase.CONFLICT_IGNORE);
                 }
                 return APPEvent.GetRecordFromJson(tmpJs);
             }
@@ -101,18 +105,14 @@ public class APPNetEvents {
 
     public ArrayList<APPEvent> getOriginEvents(String type){
         try {
-            Cursor cursor = database.query(APPSQLHelper.EVENTS_TABLE,new String[]{"json","count(*)","sum(watched)"},null,null,null,null,null);
+            Cursor cursor = database.query(APPSQLHelper.CACHE_TABLE,new String[]{"json"},"type=?",new String[]{type},null,null,"id asc");
             ArrayList<APPEvent> tmplist = new ArrayList<>();
             while(cursor.moveToNext()){
                 APPEvent tmp = APPEvent.GetRecordFromJson(new JSONObject(cursor.getString(0)));
-                if(cursor.getInt(2) == 1){
+                if(database.query(APPSQLHelper.RECORD_TABLE,new String[]{"json"},"_id=?",new String[]{tmp.get_id()},null,null,null).moveToNext()){
                     tmp.setWatched();
                 }
-                if(cursor.getInt(1) == 2 || cursor.getInt(2) == 0){
-                    if(tmp.getType().equals(type)){
-                        tmplist.add(tmp);
-                    }
-                }
+                tmplist.add(tmp);
             }
             return tmplist;
         } catch (JSONException e) {
@@ -152,14 +152,11 @@ public class APPNetEvents {
             int len = tmpJsList.length();
             for(int i = 0; i < len; i++){
                 JSONObject tmpJs = tmpJsList.getJSONObject(i);
-                tmpList.add(APPEvent.GetRecordFromJson(tmpJs));
-                ContentValues contentValues = new ContentValues();
-                contentValues.put("_id",tmpJs.getString("_id"));
-                contentValues.put("json",tmpJs.toString());
-                contentValues.put("watched",0);
-                synchronized (APPSQLHelper.class) {
-                    database.insertWithOnConflict(APPSQLHelper.EVENTS_TABLE, null, contentValues,SQLiteDatabase.CONFLICT_IGNORE);
+                APPEvent tmpEvent = APPEvent.GetRecordFromJson(tmpJs);
+                if(database.query(APPSQLHelper.RECORD_TABLE,new String[]{"json"},"_id=?",new String[]{tmpEvent.get_id()},null,null,null).moveToNext()){
+                    tmpEvent.setWatched();
                 }
+                tmpList.add(tmpEvent);
             }
         }catch (IOException | JSONException e){
             System.out.println(e);
@@ -167,6 +164,22 @@ public class APPNetEvents {
         }
 
         return tmpList;
+    }
+
+    public synchronized void cacheEvents(ArrayList<APPEvent> json, String type){
+        deleteCached(type);
+        try {
+            for(APPEvent tmp:json){
+                JSONObject tmpJs = new JSONObject(tmp.getJson());
+                ContentValues contentValues = new ContentValues();
+                contentValues.put("_id",tmpJs.getString("_id"));
+                contentValues.put("json",tmpJs.toString());
+                contentValues.put("type",tmpJs.getString("type"));
+                database.insertWithOnConflict(APPSQLHelper.CACHE_TABLE, null, contentValues,SQLiteDatabase.CONFLICT_IGNORE);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
 }

@@ -13,6 +13,12 @@ public class APPNews extends APPEvent {
         source = js.getString("source");
     }
 
+    @Override
     public String getContent(){ return content; }
     public String getSource(){ return source; }
+
+    @Override
+    public String getSourceAuthor() {
+        return getSource();
+    }
 }

@@ -20,7 +20,16 @@ public class APPPaper extends APPEvent {
             authors[i] = authorsJs.getJSONObject(i).getString("name");
         }
     }
-
+    @Override
     public String getContent(){ return content; }
     public String[] getAuthor(){ return authors.clone(); }
+
+    @Override
+    public String getSourceAuthor() {
+        String a = "";
+        for(String tmp:getAuthor()){
+            a = a + tmp +"\n";
+        }
+        return a;
+    }
 }

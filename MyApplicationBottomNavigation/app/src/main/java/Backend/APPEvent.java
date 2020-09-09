@@ -8,6 +8,7 @@ public class APPEvent {
     private final String date;
     private final String title;
     private final String type;
+    private final String json;
     private boolean watched = false;
 
     public static APPEvent GetRecordFromJson(JSONObject js) throws JSONException{
@@ -24,6 +25,7 @@ public class APPEvent {
     }
 
     public APPEvent(JSONObject js) throws JSONException {
+        json = js.toString();
         _id = js.getString("_id");
         date = js.getString("date");
         title = js.getString("title");
@@ -40,5 +42,7 @@ public class APPEvent {
     public boolean getWatched(){ return watched; }
 
     public void setWatched(){ watched = true; }
-
+    public String getSourceAuthor(){ return ""; }
+    public String getContent(){ return ""; }
+    public String getJson(){ return json; }
 }
