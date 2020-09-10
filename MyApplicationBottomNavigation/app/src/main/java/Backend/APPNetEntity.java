@@ -29,7 +29,7 @@ public class APPNetEntity {
             URL tmpGet = new URL(entitiesQueryURL+"?entity="+query);
             conn = (HttpURLConnection)tmpGet.openConnection();
             conn.setConnectTimeout(5*1000);
-            conn.setReadTimeout(5*1000);
+            conn.setReadTimeout(10*1000);
             if(conn.getResponseCode()!=200){
                 return null;
             }

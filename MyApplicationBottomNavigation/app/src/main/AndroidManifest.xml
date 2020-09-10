@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplicationbottomnavigation">
+<!--    package="com.example.myapplicationbottomnavigation">-->
 
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
@@ -24,6 +25,7 @@
         <activity android:name=".HistoryActivity"/>
         <activity android:name=".EntitySearchActivity"/>
         <activity android:name=".EntityActivity"/>
+        <activity android:name=".LabelActivity"/>
 
     </application>
 

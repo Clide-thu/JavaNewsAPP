@@ -1,6 +1,7 @@
 package com.example.myapplicationbottomnavigation.ui.home;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -17,70 +18,80 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.myapplicationbottomnavigation.LabelActivity;
 import com.example.myapplicationbottomnavigation.R;
 import com.example.myapplicationbottomnavigation.ui.refresh.MyRefreshLayout;
 import com.example.myapplicationbottomnavigation.ui.refresh.RefreshFragment;
 import com.google.android.material.tabs.TabLayout;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.StringReader;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Scanner;
 import java.util.Set;
 
 public class HomeFragment extends Fragment {
 
     private ArrayList<String> types = new ArrayList<>();
-    private HashMap<String, RefreshFragment> myFragments = new HashMap<>();
     private ArrayList<RefreshFragment> showFragments = new ArrayList<>();
     private FragmentPagerAdapter adapter;
     private TabLayout tabLayout;
+    private ViewPager viewPager;
 
-    public HomeFragment() {
-        super();
-        init();
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(resultCode == 100){
+            System.out.println("homerefresh");
+            refreshLabel();
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
-    public HomeFragment(int contentLayoutId) {
-        super(contentLayoutId);
-        init();
-    }
-
-    private void init(){
-        types.add("news");
-        types.add("paper");
-        myFragments.put("news",new RefreshFragment("news"));
-        myFragments.put("paper",new RefreshFragment("paper"));
-    }
 
     public class MyAdapter extends FragmentPagerAdapter{
-        public MyAdapter(@NonNull FragmentManager fm) {
+        List<String> list;
+        List<RefreshFragment> fragments;
+        public MyAdapter(@NonNull FragmentManager fm,List<String> list, List<RefreshFragment> fragments) {
             super(fm);
+            this.list = list;
+            this.fragments = fragments;
         }
 
-        @NonNull
         @Override
         public Fragment getItem(int position) {
-            return showFragments.get(position);
+            return fragments.get(position);
+        }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return list.get(position);
         }
 
         @Override
         public int getCount() {
-            return showFragments.size();
+            return fragments != null ? fragments.size() : 0;
         }
     };
 
-    public void refreshLabel(){
-        System.out.println("refreshLabel");
+    public synchronized void refreshLabel(){
+//        System.out.println("refreshLabel");
         SharedPreferences sharedPreferences;
         sharedPreferences = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
         showFragments.clear();
-        tabLayout.removeAllTabs();
-        for(String tmpLabel:types){
-            if(sharedPreferences.getBoolean(tmpLabel,true)){
-                showFragments.add(myFragments.get(tmpLabel));
-                tabLayout.addTab(tabLayout.newTab().setText(tmpLabel));
-            }
+        types.clear();
+        String label = sharedPreferences.getString("label","news paper");
+        System.out.println(label+"haha");
+        Scanner scanner = new Scanner(label);
+        while (scanner.hasNext()){
+            String tmpLabel = scanner.next();
+            System.out.println(tmpLabel+"ha");
+            showFragments.add(new RefreshFragment(tmpLabel));
+            types.add(tmpLabel);
         }
         adapter.notifyDataSetChanged();
     }
@@ -90,10 +101,16 @@ public class HomeFragment extends Fragment {
 
         View view = LayoutInflater.from(getContext()).inflate(R.layout.fragment_home,null);
         tabLayout = view.findViewById(R.id.tabLayout);
-        ViewPager viewPager = view.findViewById(R.id.viewPager);
-        adapter = new MyAdapter(getChildFragmentManager());
+        viewPager = view.findViewById(R.id.viewPager);
+        adapter = new MyAdapter(getChildFragmentManager(), types, showFragments);
         viewPager.setAdapter(adapter);
-        tabLayout.setupWithViewPager(viewPager,false);
+        tabLayout.setupWithViewPager(viewPager,true);
+        view.findViewById(R.id.tabButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivityForResult(new Intent(getContext(), LabelActivity.class),100);
+            }
+        });
         refreshLabel();
         return view;
     }

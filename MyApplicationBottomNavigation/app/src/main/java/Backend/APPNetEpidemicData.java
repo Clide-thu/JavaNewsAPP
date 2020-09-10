@@ -25,14 +25,14 @@ public class APPNetEpidemicData {
     public APPNetEpidemicData(){}
 
     //please run in thread
-    private void fetchData(){
+    private synchronized void fetchData(){
         if(!isCached){
             try {
                 HttpURLConnection conn;
                 URL tmpGet = new URL(epidemicDataURL);
                 conn = (HttpURLConnection)tmpGet.openConnection();
                 conn.setConnectTimeout(5*1000);
-                conn.setReadTimeout(3*1000);
+                conn.setReadTimeout(10*1000);
                 if(conn.getResponseCode()!=200){
                     return;
                 }
@@ -63,13 +63,13 @@ public class APPNetEpidemicData {
         }
     }
 
-    public LinkedHashMap<String, APPNetEpidemicData> getDataOfChina(){
+    public LinkedHashMap<String, APPEpidemicData> getDataOfChina(){
         fetchData();
-        return (LinkedHashMap<String, APPNetEpidemicData>) dataOfChina.clone();
+        return dataOfChina;
     }
 
-    public LinkedHashMap<String, APPNetEpidemicData> getDataOfWorld(){
+    public LinkedHashMap<String, APPEpidemicData> getDataOfWorld(){
         fetchData();
-        return (LinkedHashMap<String, APPNetEpidemicData>) dataOfWorld.clone();
+        return dataOfWorld;
     }
 }

@@ -5,7 +5,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class APPEpidemicData {
-    static int length = 30;
+    static int length = 15;
     private String region;
     private int[] confirmed = new int[length];
     private int[] cured = new int[length];

@@ -19,6 +19,7 @@ import android.widget.TextView;
 import com.example.myapplicationbottomnavigation.ui.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
 import androidx.navigation.NavController;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     private APPNetEvents eventsService;
     private ScrollView scrollView;
     private LinearLayout linearLayout;
+    private NavController navController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,10 +52,19 @@ public class MainActivity extends AppCompatActivity {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment);
 //        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
         initSearch();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(resultCode == 100){
+            System.out.println("mainrefresh");
+            navController.navigate(R.id.navigation_home);
+        }
     }
 
     private void initSearch(){
@@ -146,9 +157,13 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        refresh();
+    }
+    private void refresh(){
         HomeFragment homeFragment = (HomeFragment)getSupportFragmentManager().findFragmentById(R.id.navigation_home);
         if(homeFragment != null){
             homeFragment.refreshLabel();
+            System.out.println("refreshLabel");
         }
     }
 }

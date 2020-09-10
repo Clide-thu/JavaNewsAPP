@@ -1,5 +1,36 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.mob.sdk'
 
+MobSDK {
+    appKey "30c2bec8cbef6"
+    appSecret "46ebb0123700cf9e6fdf37e9d06ebd21"
+    ShareSDK {
+        loopShare true
+        devInfo {
+            SinaWeibo {
+                appKey "3697947352"
+                appSecret "f356dfe229c9e45e9b5b3d6927e410a9"
+                RedirectUrl="http://www.sharesdk.cn"
+                callbackUrl="http://www.sharesdk.cn"
+                shareByAppClient false
+            }
+            Wechat {
+                appId "wxc265ca73405bec07"
+                appSecret "d27f0157b1bf0307b1fdc612e1be5c17"
+                userName "gh_afb25ac019c9"
+                path "pages/index/index.html?id=1"
+                withShareTicket true
+                miniprogramType 2
+            }
+            QQ {
+                appId "100371282"
+                appKey "aed9b0303e3ed1e27bae87c33761161d"
+                shareByAppClient true
+            }
+
+        }
+    }
+}
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.1"
@@ -24,6 +55,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'

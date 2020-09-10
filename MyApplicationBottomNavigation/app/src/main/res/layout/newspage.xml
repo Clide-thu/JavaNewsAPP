@@ -1,38 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:id="@+id/titleView"
-            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/ret"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#FF000000"
-            android:textSize="25sp"
-            android:layout_margin="10dp"/>
+            android:text="返回"/>
         <TextView
-            android:id="@+id/source_authorView"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="4"/>
+        <Button
+            android:id="@+id/share"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="right"
-            android:layout_margin="5dp"
-            android:paddingRight="10dp"/>
-        <TextView
-            android:id="@+id/timeView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:gravity="right"/>
-        <TextView
-            android:id="@+id/contentView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#FF000000"
-            android:textSize="20sp"
-            android:layout_margin="15dp"
-            android:lineSpacingExtra="5dp"/>
+            android:layout_gravity="right"
+            android:text="分享"/>
+
     </LinearLayout>
-</ScrollView>
+    <ScrollView
+        android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/titleView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FF000000"
+                android:textSize="25sp"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:id="@+id/source_authorView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_margin="5dp"
+                android:paddingRight="10dp"/>
+            <TextView
+                android:id="@+id/timeView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:gravity="right"/>
+            <TextView
+                android:id="@+id/contentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FF000000"
+                android:textSize="20sp"
+                android:layout_margin="15dp"
+                android:lineSpacingExtra="5dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

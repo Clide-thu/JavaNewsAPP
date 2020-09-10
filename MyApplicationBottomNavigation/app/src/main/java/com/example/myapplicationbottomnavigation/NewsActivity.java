@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import Backend.APPEvent;
 import Backend.APPNetEvents;
+import cn.sharesdk.onekeyshare.OnekeyShare;
 
 public class NewsActivity extends AppCompatActivity {
     private APPNetEvents eventService;
@@ -27,6 +29,21 @@ public class NewsActivity extends AppCompatActivity {
         eventService = new APPNetEvents(getApplication());
         Intent intent = getIntent();
         final String _id = intent.getStringExtra("_id");
+        findViewById(R.id.ret).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        findViewById(R.id.share).setVisibility(View.GONE);
+        findViewById(R.id.share).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                OnekeyShare handler = new OnekeyShare();
+                handler.setTitle(((TextView)findViewById(R.id.titleView)).getText().toString());
+                handler.show(NewsActivity.this);
+            }
+        });
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -48,6 +65,7 @@ public class NewsActivity extends AppCompatActivity {
                         ((TextView)findViewById(R.id.source_authorView)).setText(event.getSourceAuthor());
                         ((TextView)findViewById(R.id.timeView)).setText(event.getDate());
                         ((TextView)findViewById(R.id.contentView)).setText("        "+event.getContent());
+                        findViewById(R.id.share).setVisibility(View.VISIBLE);
                     }
                 });
             }

@@ -85,6 +85,10 @@ public class MyRefreshLayout extends SwipeRefreshLayout implements ListView.OnSc
                     @Override
                     public void run() {
                         adapter.notifyDataSetChanged();
+                        if(events.size()==0){
+                            setRefreshing(true);
+                            loadMore();
+                        }
                     }
                 });
             }
@@ -136,6 +140,7 @@ public class MyRefreshLayout extends SwipeRefreshLayout implements ListView.OnSc
             }.start();
         }
         cache();
+        setRefreshing(false);
     }
 
 
