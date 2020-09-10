@@ -40,7 +40,9 @@ public class NewsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 OnekeyShare handler = new OnekeyShare();
-                handler.setTitle(((TextView)findViewById(R.id.titleView)).getText().toString());
+                handler.setTitle("疫情新闻分享");
+                handler.setText(((TextView)findViewById(R.id.titleView)).getText().toString()
+                        +"\n       "+((TextView)findViewById(R.id.contentView)).getText().toString());
                 handler.show(NewsActivity.this);
             }
         });

@@ -10,9 +10,9 @@ MobSDK {
             SinaWeibo {
                 appKey "3697947352"
                 appSecret "f356dfe229c9e45e9b5b3d6927e410a9"
-                RedirectUrl="http://www.sharesdk.cn"
-                callbackUrl="http://www.sharesdk.cn"
-                shareByAppClient false
+//                RedirectUrl="http://www.sharesdk.cn"
+//                callbackUrl="http://www.sharesdk.cn"
+//                shareByAppClient false
             }
             Wechat {
                 appId "wxc265ca73405bec07"

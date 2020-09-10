@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DevInfor>
-<SinaWeibo AppKey="3697947352" AppSecret="f356dfe229c9e45e9b5b3d6927e410a9" callbackUrl="http://www.sharesdk.cn" ShareByAppClient="false" />
+<SinaWeibo AppKey="3697947352" AppSecret="f356dfe229c9e45e9b5b3d6927e410a9" />
 <TencentWeibo Enable="false" />
 <Douban Enable="false" />
 <QZone Enable="false" />
