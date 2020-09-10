@@ -9,13 +9,11 @@ import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.example.myapplicationbottomnavigation.MainActivity;
 import com.example.myapplicationbottomnavigation.NewsActivity;
 import com.example.myapplicationbottomnavigation.R;
 
@@ -33,7 +31,6 @@ public class MyRefreshLayout extends SwipeRefreshLayout implements ListView.OnSc
 
     public MyRefreshLayout(@NonNull Context context, String type) {
         super(context);
-        System.out.println("renew MyRefreshLayout");
         this.type = type;
         adapter = new APPEventAdapter(getContext(), R.layout.event_show, events);
         inflate(context, R.layout.myrefresh_layout, this);

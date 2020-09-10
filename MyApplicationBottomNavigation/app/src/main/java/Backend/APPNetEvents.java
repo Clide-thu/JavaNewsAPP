@@ -29,6 +29,12 @@ public class APPNetEvents {
         database = new APPSQLHelper(context).getWritableDatabase();
     }
 
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+        database.close();
+    }
+
     public synchronized int deleteRecord(){
         return database.delete(APPSQLHelper.RECORD_TABLE,null,null);
     }
@@ -182,4 +188,50 @@ public class APPNetEvents {
         }
     }
 
+    public ArrayList<APPEvent> search(String keyword){
+        System.out.println(keyword);
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("search",keyword);
+        database.insertWithOnConflict(APPSQLHelper.SEARCH_TABLE, null, contentValues,SQLiteDatabase.CONFLICT_REPLACE);
+        HttpURLConnection conn;
+        ArrayList<APPEvent> tmpList = new ArrayList<>();
+        try {
+            URL tmpGet = new URL(eventsURL+"?size="+200);
+            System.out.println(eventsURL+"?size="+200);
+            conn = (HttpURLConnection)tmpGet.openConnection();
+            conn.setConnectTimeout(5*1000);
+            conn.setReadTimeout(10*1000);
+            if(conn.getResponseCode()!=200){
+                return null;
+            }
+
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+            JSONObject Js = new JSONObject(in.readLine());
+            System.out.println("read");
+            JSONArray tmpJsList = Js.getJSONArray("data");
+
+            int len = tmpJsList.length();
+            for(int i = 0; i < len; i++){
+                JSONObject tmpJs = tmpJsList.getJSONObject(i);
+                APPEvent tmpEvent = APPEvent.GetRecordFromJson(tmpJs);
+                if(tmpEvent.getTitle().contains(keyword)){
+                    tmpList.add(tmpEvent);
+                }
+            }
+        }catch (IOException | JSONException e){
+            System.out.println(e);
+            return null;
+        }
+
+        return tmpList;
+    }
+
+    public ArrayList<String> getSearchHistory(){
+        ArrayList<String> tmp = new ArrayList<>();
+        Cursor cursor = database.query(APPSQLHelper.SEARCH_TABLE,new String[]{"search"},null,null,null,null,"id desc");
+        while(cursor.moveToNext()){
+            tmp.add(cursor.getString(0));
+        }
+        return tmp;
+    }
 }

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -30,6 +31,16 @@ public class NewsActivity extends AppCompatActivity {
             @Override
             public void run() {
                 final APPEvent event = eventService.getEventBy_id(_id);
+                if(event == null){
+                    new Handler(Looper.getMainLooper()).post(new Runnable() {
+                        @Override
+                        public void run() {
+                            Toast.makeText(NewsActivity.this,"network error",Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                    });
+                    return;
+                }
                 new Handler(Looper.getMainLooper()).post(new Runnable() {
                     @Override
                     public void run() {

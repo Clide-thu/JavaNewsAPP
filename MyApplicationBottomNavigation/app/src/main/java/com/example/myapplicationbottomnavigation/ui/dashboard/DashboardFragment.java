@@ -22,7 +22,7 @@ public class DashboardFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = new MyRefreshLayout(getContext(),"news");
-        return root;
+        View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
+        return view;
     }
 }

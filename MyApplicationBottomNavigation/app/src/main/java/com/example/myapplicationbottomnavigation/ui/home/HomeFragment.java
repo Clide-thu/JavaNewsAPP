@@ -96,4 +96,10 @@ public class HomeFragment extends Fragment {
         refreshLabel();
         return view;
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        refreshLabel();
+    }
 }
