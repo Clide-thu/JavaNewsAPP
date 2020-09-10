@@ -23,13 +23,14 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
 import Backend.APPEvent;
 import Backend.APPNetEvents;
 
-public class SearchActivity extends Activity {
+public class SearchActivity extends AppCompatActivity {
     private String keyword;
     private ScrollView scrollView;
     private ArrayList<SpannableString> titleList;
@@ -94,15 +95,16 @@ public class SearchActivity extends Activity {
                         tmpView.setText(tmpString);
                         linearLayout.addView(tmpView);
                         tmpView.setTag(events.get(i));
-                            tmpView.setOnClickListener(new View.OnClickListener() {
-                                @Override
-                                public void onClick(View view) {
-                                    APPEvent tmpEvent = (APPEvent) view.getTag();
-                                    Intent intent = new Intent(SearchActivity.this, NewsActivity.class);
-                                    intent.putExtra("_id",tmpEvent.get_id());
-                                    startActivity(intent);
-                                }
-                            });
+                        tmpView.setBackground(getDrawable(R.drawable.underline));
+                        tmpView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                APPEvent tmpEvent = (APPEvent) view.getTag();
+                                Intent intent = new Intent(SearchActivity.this, NewsActivity.class);
+                                intent.putExtra("_id",tmpEvent.get_id());
+                                startActivity(intent);
+                            }
+                        });
                     }
                     if(linearLayout.getChildCount()==0){
                         TextView tmpView = (TextView) SearchActivity.this.getLayoutInflater().inflate(R.layout.searchhistory_show,null);

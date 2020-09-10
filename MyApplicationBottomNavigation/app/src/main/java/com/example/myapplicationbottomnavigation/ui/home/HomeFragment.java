@@ -71,6 +71,7 @@ public class HomeFragment extends Fragment {
     };
 
     public void refreshLabel(){
+        System.out.println("refreshLabel");
         SharedPreferences sharedPreferences;
         sharedPreferences = getActivity().getSharedPreferences("user", Context.MODE_PRIVATE);
         showFragments.clear();
@@ -95,11 +96,5 @@ public class HomeFragment extends Fragment {
         tabLayout.setupWithViewPager(viewPager,false);
         refreshLabel();
         return view;
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        refreshLabel();
     }
 }

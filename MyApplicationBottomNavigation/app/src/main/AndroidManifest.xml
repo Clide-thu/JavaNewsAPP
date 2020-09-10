@@ -21,6 +21,9 @@
         </activity>
         <activity android:name=".NewsActivity"/>
         <activity android:name=".SearchActivity"/>
+        <activity android:name=".HistoryActivity"/>
+        <activity android:name=".EntitySearchActivity"/>
+        <activity android:name=".EntityActivity"/>
 
     </application>
 

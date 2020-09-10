@@ -16,6 +16,7 @@ import android.widget.ScrollView;
 import android.widget.SearchView;
 import android.widget.TextView;
 
+import com.example.myapplicationbottomnavigation.ui.home.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -35,7 +36,6 @@ import Backend.APPNetEvents;
 public class MainActivity extends AppCompatActivity {
     private ArrayList<String> searchHistory;
     private SearchView searchView;
-    private ArrayAdapter<String> adapter;
     private APPNetEvents eventsService;
     private ScrollView scrollView;
     private LinearLayout linearLayout;
@@ -65,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
         searchView.setOnSearchClickListener(new SearchView.OnClickListener(){
             @Override
             public void onClick(View view) {
-                adapter = new ArrayAdapter<String>(MainActivity.this,R.layout.searchhistory_show,searchHistory);
 //                searchHistoryView.setTextFilterEnabled(true);
 //                searchHistoryView.setVisibility(View.VISIBLE);
                 scrollView.setVisibility(View.VISIBLE);
@@ -84,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
                                 for(String tmpString: searchHistory){
                                     final TextView tmpText = (TextView) getLayoutInflater().inflate(R.layout.searchhistory_show,null);
                                     tmpText.setText(tmpString);
+                                    tmpText.setBackground(getDrawable(R.drawable.underline));
                                     linearLayout.addView(tmpText);
                                     tmpText.setOnClickListener(new View.OnClickListener() {
                                         @Override
@@ -99,20 +99,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        searchView.setOnFocusChangeListener(new View.OnFocusChangeListener() {
-            @Override
-            public void onFocusChange(View view, boolean b) {
-                System.out.println(("change"));
-            }
-        });
-
         searchView.setOnCloseListener(new SearchView.OnCloseListener() {
             @Override
             public boolean onClose() {
 //                searchHistoryView.setVisibility(View.GONE);
                 scrollView.setVisibility(View.GONE);
                 searchHistory.clear();
-                adapter.notifyDataSetChanged();
                 return false;
             }
         });
@@ -151,4 +143,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        HomeFragment homeFragment = (HomeFragment)getSupportFragmentManager().findFragmentById(R.id.navigation_home);
+        if(homeFragment != null){
+            homeFragment.refreshLabel();
+        }
+    }
 }
