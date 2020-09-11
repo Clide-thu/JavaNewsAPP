@@ -62,11 +62,10 @@ public class LabelActivity extends AppCompatActivity {
         TextView tv = new TextView(this);
         layoutParams.setMargins(50, 50, 50, 50);
         tv.setText(list.get(0));
-        tv.setMaxEms(20);
-        tv.setTextSize(40);
+        tv.setTextSize(30);
         tv.setSingleLine();
         tv.setTextColor(Color.BLACK);
-        tv.setBackgroundColor(Color.GRAY);
+        tv.setBackground(getResources().getDrawable(R.drawable.textview));
         tv.setLayoutParams(layoutParams);
         if(flag[0] ==0)
             flowLayout.addView(tv, layoutParams);
@@ -76,11 +75,11 @@ public class LabelActivity extends AppCompatActivity {
         final TextView sv = new TextView(this);
         layoutParams.setMargins(50, 50, 50, 50);
         sv.setText(list.get(1));
-        sv.setMaxEms(10);
-        sv.setTextSize(40);
+        sv.setTextSize(30);
         sv.setSingleLine();
         sv.setTextColor(Color.BLACK);
-        sv.setBackgroundColor(Color.GRAY);
+        sv.setBackground(getResources().getDrawable(R.drawable.textview));
+
         sv.setLayoutParams(layoutParams);
         if(flag[1] ==0)
             flowLayout.addView(sv, layoutParams);

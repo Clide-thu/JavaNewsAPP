@@ -15,6 +15,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.myapplicationbottomnavigation.EntitySearchActivity;
+import com.example.myapplicationbottomnavigation.GatherActivity;
 import com.example.myapplicationbottomnavigation.HistoryActivity;
 import com.example.myapplicationbottomnavigation.PeopleActivity;
 import com.example.myapplicationbottomnavigation.R;
@@ -25,6 +26,7 @@ public class DashboardFragment extends Fragment {
     private CardView history;
     private CardView entitySearch;
     private CardView peopleShow;
+    private CardView gather;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class DashboardFragment extends Fragment {
         history = view.findViewById(R.id.history);
         entitySearch = view.findViewById(R.id.entitySearch);
         peopleShow = view.findViewById(R.id.peopleShow);
+        gather = view.findViewById(R.id.gather);
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,6 +52,12 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), PeopleActivity.class));
+            }
+        });
+        gather.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), GatherActivity.class));
             }
         });
         return view;
