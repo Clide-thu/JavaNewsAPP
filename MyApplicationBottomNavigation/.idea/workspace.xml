@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="system.out" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c7e0078c-3cb8-4507-a82d-4cc6ffaa42b9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/androidTest/java/com/java/caisijie/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPEntityRelation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPEpidemicData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPNetEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPNetEpidemicData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPNetEvents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPNetPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPNews.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPPaper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPPerson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/Backend/APPSQLHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/EntityActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/EntitySearchActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/FlowLayout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/GatherActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/HistoryActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/LabelActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/NewsActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/PeopleActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/PersonActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/SearchActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/WelcomeActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/ui/GatherFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/ui/PeopleFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/ui/dashboard/DashboardFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/ui/dashboard/DashboardViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/ui/home/HomeFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/ui/home/HomeViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/ui/notifications/NotificationsFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/ui/notifications/NotificationsViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/ui/refresh/APPEventAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/ui/refresh/MyRefreshLayout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/java/com/java/caisijie/ui/refresh/RefreshFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/anim/image_welcom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/ic_home_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/ic_notifications_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/pic_background_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/pic_background_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/rounded_corner_search_box.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/spacer_medium.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/textview.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/textview_border.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/drawable/underline.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/entity_search.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/entity_show.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/event_show.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/fragment_dashboard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/fragment_notifications.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/fragment_people.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/label_edit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/myrefresh_layout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/newspage.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/people.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/person_page.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/personcard.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/property_show.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/relation_show.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/search_show.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/searchhistory_show.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/layout/welcome.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/menu/bottom_nav_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/navigation/mobile_navigation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/raw/tmp.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/app/src/test/java/com/java/caisijie/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui/tmpmob/ShareSDK/assets/ShareSDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/java/caisijie/ExampleInstrumentedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPEntityRelation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPEpidemicData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPNetEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPNetEpidemicData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPNetEvents.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPNetPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPNews.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPPaper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/Backend/APPSQLHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/EntityActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/EntitySearchActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/FlowLayout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/GatherActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/HistoryActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/LabelActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/NewsActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/PeopleActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/PersonActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/SearchActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/WelcomeActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/GatherFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/PeopleFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/dashboard/DashboardFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/dashboard/DashboardViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/home/HomeFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/home/HomeViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/notifications/NotificationsFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/notifications/NotificationsViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/refresh/APPEventAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/refresh/MyRefreshLayout.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/refresh/RefreshFragment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/anim/image_welcom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_home_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/ic_notifications_black_24dp.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/pic_background_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/pic_background_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/rounded_corner_search_box.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/spacer_medium.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/textview.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/textview_border.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/underline.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/entity_search.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/entity_show.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/event_show.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_dashboard.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_notifications.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_people.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/label_edit.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/myrefresh_layout.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/newspage.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/people.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/person_page.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/personcard.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/property_show.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/relation_show.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/search_show.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/searchhistory_show.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/welcome.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/bottom_nav_menu.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/mobile_navigation.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/tmp.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/java/caisijie/ExampleUnitTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmpmob/ShareSDK/assets/ShareSDK.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_30" />
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="resourceFile" />
+        <option value="layoutResourceFile_vertical" />
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="GenerateSignedApkSettings">
+    <option name="BUILD_TARGET_KEY" value="apk" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1hBilBoeDlxzZZXYwkiTQrQEIek" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ApkExportedModule" value="app" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Pixel_2_API_30" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-08T16:59:42.922Z" />
+    <property name="ResourceManagerPrefKey.ResourceType" value="ANIMATOR" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/java/com/example/myapplicationbottomnavigation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JavaNews_caisijie_caiyunrui" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
+    <option name="LAST_EDITED_SIGNING_CONFIG" value="debug" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workspace\JavaNewsAPP\MyApplicationBottomNavigation\app\src\main\res\drawable" />
+      <recent name="D:\Workspace\JavaNewsAPP\MyApplicationBottomNavigation\app\src\main\res\layout" />
+      <recent name="D:\Workspace\JavaNewsAPP\MyApplicationBottomNavigation\app\src\main\res\anim" />
+      <recent name="D:\Workspace\JavaNewsAPP\MyApplicationBottomNavigation\app\src\main\res\raw" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.myapplicationbottomnavigation" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.myapplicationbottomnavigation" />
+      <recent name="com.example.myapplicationbottomnavigation.ui" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Workspace\JavaNewsAPP\MyApplicationBottomNavigation\app\src\main\res\drawable" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="app" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="DEVICE_AND_SNAPSHOT_COMBO_BOX" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7e0078c-3cb8-4507-a82d-4cc6ffaa42b9" name="Default Changelist" comment="" />
+      <created>1599491034930</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599491034930</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="476" y="153" key="#PSD" timestamp="1599757608200">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="954" y="527" key="#PSD/0.0.1920.1080@0.0.1920.1080" timestamp="1599501170749" />
+    <state x="476" y="153" key="#PSD/0.30.1920.1050@0.30.1920.1050" timestamp="1599757608200" />
+    <state x="691" y="305" key="#app" timestamp="1599779658596">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="691" y="305" key="#app/0.30.1920.1050@0.30.1920.1050" timestamp="1599779658596" />
+    <state x="691" y="493" width="706" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1599824668420">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="969" y="332" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1599549529150" />
+    <state x="691" y="493" width="706" height="569" key="#com.intellij.ide.util.MemberChooser/0.30.1920.1050@0.30.1920.1050" timestamp="1599824668420" />
+    <state x="697" y="413" width="530" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1599827216167">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="697" y="413" width="530" height="293" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.30.1920.1050@0.30.1920.1050" timestamp="1599827216167" />
+    <state x="1283" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599713630596">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="1283" y="236" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599500592864" />
+    <state x="1283" y="259" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1599713630596" />
+    <state x="433" y="359" key="AndroidCreateResourceDirectoryDialog" timestamp="1599827253329">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="433" y="338" key="AndroidCreateResourceDirectoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599499618501" />
+    <state x="433" y="359" key="AndroidCreateResourceDirectoryDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1599827253329" />
+    <state x="128" y="458" width="840" height="487" key="AndroidCreateResourceFileDialog" timestamp="1599800142916">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="647" y="391" key="AndroidCreateResourceFileDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599552277749" />
+    <state x="128" y="458" width="840" height="487" key="AndroidCreateResourceFileDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1599800142916" />
+    <state width="438" height="466" key="DebuggerActiveHint" timestamp="1599585199863">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="438" height="466" key="DebuggerActiveHint/0.30.1920.1050@0.30.1920.1050" timestamp="1599585199863" />
+    <state x="508" y="286" key="FileChooserDialogImpl" timestamp="1599830791512">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="508" y="286" key="FileChooserDialogImpl/0.30.1920.1050@0.30.1920.1050" timestamp="1599830791512" />
+    <state width="1349" height="235" key="GridCell.Tab.0.bottom" timestamp="1599829218235">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1599552330033" />
+    <state width="1349" height="235" key="GridCell.Tab.0.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1599829218235" />
+    <state width="1349" height="235" key="GridCell.Tab.0.center" timestamp="1599829218235">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1599552330033" />
+    <state width="1349" height="235" key="GridCell.Tab.0.center/0.30.1920.1050@0.30.1920.1050" timestamp="1599829218235" />
+    <state width="1349" height="235" key="GridCell.Tab.0.left" timestamp="1599829218234">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1599552330033" />
+    <state width="1349" height="235" key="GridCell.Tab.0.left/0.30.1920.1050@0.30.1920.1050" timestamp="1599829218234" />
+    <state width="1349" height="235" key="GridCell.Tab.0.right" timestamp="1599829218235">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="270" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1599552330033" />
+    <state width="1349" height="235" key="GridCell.Tab.0.right/0.30.1920.1050@0.30.1920.1050" timestamp="1599829218235" />
+    <state width="1413" height="332" key="GridCell.Tab.1.bottom" timestamp="1599615322472">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1413" height="332" key="GridCell.Tab.1.bottom/0.30.1920.1050@0.30.1920.1050" timestamp="1599615322472" />
+    <state width="1413" height="332" key="GridCell.Tab.1.center" timestamp="1599615322472">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1413" height="332" key="GridCell.Tab.1.center/0.30.1920.1050@0.30.1920.1050" timestamp="1599615322472" />
+    <state width="1413" height="332" key="GridCell.Tab.1.left" timestamp="1599615322472">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1413" height="332" key="GridCell.Tab.1.left/0.30.1920.1050@0.30.1920.1050" timestamp="1599615322472" />
+    <state width="1413" height="332" key="GridCell.Tab.1.right" timestamp="1599615322472">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state width="1413" height="332" key="GridCell.Tab.1.right/0.30.1920.1050@0.30.1920.1050" timestamp="1599615322472" />
+    <state x="461" y="181" key="SettingsEditor" timestamp="1599503806566">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="461" y="181" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1599503806566" />
+    <state x="279" y="341" key="chooseDestDirectoryDialog" timestamp="1599790400406">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="279" y="320" key="chooseDestDirectoryDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1599531173895" />
+    <state x="279" y="341" key="chooseDestDirectoryDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1599790400406" />
+    <state x="198" y="138" width="1273" height="814" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1599676325635">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="198" y="138" width="1273" height="814" key="com.android.tools.idea.avdmanager.AvdListDialog/0.30.1920.1050@0.30.1920.1050" timestamp="1599676325635" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1599501114177">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1599501114177" />
+    <state x="862" y="297" width="672" height="678" key="search.everywhere.popup" timestamp="1599769355941">
+      <screen x="0" y="30" width="1920" height="1050" />
+    </state>
+    <state x="862" y="297" width="672" height="678" key="search.everywhere.popup/0.30.1920.1050@0.30.1920.1050" timestamp="1599769355941" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/java/caisijie/ui/refresh/APPEventAdapter.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
