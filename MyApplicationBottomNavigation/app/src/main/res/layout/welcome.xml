@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
-    tools:context="com.example.myapplicationbottomnavigation.WelcomeActivity">
+    tools:context="com.java.caisijie.WelcomeActivity">
 
     <ImageView
         android:id="@+id/image_background"
