@@ -39,9 +39,10 @@
                 android:textSize="30sp"
                 android:padding="25dp"
                 android:textColor="#FF000000"
-                android:gravity="center"/>
+                />
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
+            android:id="@+id/peopleShow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="5dp"
@@ -50,7 +51,22 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="历史记录"
+                android:text="知疫学者"
+                android:textSize="30sp"
+                android:padding="25dp"
+                android:textColor="#FF000000"/>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="5dp"
+            crad_view:cardElevation="10dp"
+            android:layout_margin="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="疫情新闻聚类"
                 android:textSize="30sp"
                 android:padding="25dp"
                 android:textColor="#FF000000"/>

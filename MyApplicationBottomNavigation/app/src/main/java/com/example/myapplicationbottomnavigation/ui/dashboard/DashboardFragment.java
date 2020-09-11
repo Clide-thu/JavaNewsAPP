@@ -16,6 +16,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.myapplicationbottomnavigation.EntitySearchActivity;
 import com.example.myapplicationbottomnavigation.HistoryActivity;
+import com.example.myapplicationbottomnavigation.PeopleActivity;
 import com.example.myapplicationbottomnavigation.R;
 import com.example.myapplicationbottomnavigation.ui.refresh.MyRefreshLayout;
 
@@ -23,6 +24,7 @@ public class DashboardFragment extends Fragment {
 
     private CardView history;
     private CardView entitySearch;
+    private CardView peopleShow;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class DashboardFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_dashboard, container, false);
         history = view.findViewById(R.id.history);
         entitySearch = view.findViewById(R.id.entitySearch);
+        peopleShow = view.findViewById(R.id.peopleShow);
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -40,6 +43,12 @@ public class DashboardFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), EntitySearchActivity.class));
+            }
+        });
+        peopleShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(), PeopleActivity.class));
             }
         });
         return view;

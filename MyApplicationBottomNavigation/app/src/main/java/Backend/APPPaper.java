@@ -28,7 +28,7 @@ public class APPPaper extends APPEvent {
     public String getSourceAuthor() {
         String a = "";
         for(String tmp:getAuthor()){
-            a = a + tmp +"\n";
+            a = a + tmp +", ";
         }
         return a;
     }

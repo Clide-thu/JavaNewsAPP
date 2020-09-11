@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -93,6 +94,7 @@ public class NotificationsFragment extends Fragment implements AdapterView.OnIte
         mProSpinner.setAdapter(adapter1);
         mProSpinner.setSelection(0,true);
         lineChart = view.findViewById(R.id.lc);
+        Toast.makeText(getContext(),"waiting...",Toast.LENGTH_SHORT).show();
         getData();
 
         mProSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener()
@@ -206,10 +208,7 @@ public class NotificationsFragment extends Fragment implements AdapterView.OnIte
         xAxis.setDrawAxisLine(false); // 不绘制X轴
         xAxis.setDrawGridLines(false); // 不绘制网格线
         // 模拟X轴标签数据
-        final String[] weekStrs = new String[15];
-        for(int i= 14; i >= 0; i--){
-            weekStrs[i] = new Integer(15-i).toString();
-        }
+        final String[] weekStrs = new String[]{"15天前","","","","","10天前","","","","","5天前","","","","","今日"};
         xAxis.setLabelCount(weekStrs.length); // 设置标签数量
         xAxis.setTextSize(15); // 文本大小为18dp
         xAxis.setGranularity(1); // 设置间隔尺寸

@@ -85,7 +85,7 @@ public class APPNetEvents {
                 System.out.println(tmpGet.toString());
                 conn = (HttpURLConnection)tmpGet.openConnection();
                 conn.setConnectTimeout(5*1000);
-                conn.setReadTimeout(3*1000);
+                conn.setReadTimeout(10*1000);
                 if(conn.getResponseCode()!=200){
                     return null;
                 }
@@ -146,7 +146,7 @@ public class APPNetEvents {
             System.out.println(eventsURL+"?type="+type+"&page="+page+"&size="+size);
             conn = (HttpURLConnection)tmpGet.openConnection();
             conn.setConnectTimeout(5*1000);
-            conn.setReadTimeout(3*1000);
+            conn.setReadTimeout(10*1000);
             if(conn.getResponseCode()!=200){
                 return null;
             }

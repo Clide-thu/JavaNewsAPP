@@ -85,11 +85,9 @@ public class HomeFragment extends Fragment {
         showFragments.clear();
         types.clear();
         String label = sharedPreferences.getString("label","news paper");
-        System.out.println(label+"haha");
         Scanner scanner = new Scanner(label);
         while (scanner.hasNext()){
             String tmpLabel = scanner.next();
-            System.out.println(tmpLabel+"ha");
             showFragments.add(new RefreshFragment(tmpLabel));
             types.add(tmpLabel);
         }

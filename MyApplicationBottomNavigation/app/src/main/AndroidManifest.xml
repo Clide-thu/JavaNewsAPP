@@ -26,6 +26,8 @@
         <activity android:name=".EntitySearchActivity"/>
         <activity android:name=".EntityActivity"/>
         <activity android:name=".LabelActivity"/>
+        <activity android:name=".PeopleActivity"/>
+        <activity android:name=".PersonActivity"/>
 
     </application>
 

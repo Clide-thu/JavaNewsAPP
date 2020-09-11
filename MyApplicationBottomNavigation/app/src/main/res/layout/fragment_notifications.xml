@@ -111,7 +111,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#ffffffff"
-        tools:ignore="MissingClass" />
+        tools:ignore="MissingClass"
+        android:layout_margin="10dp"/>
 
 
 </LinearLayout>

@@ -41,19 +41,27 @@ public class APPEventAdapter extends ArrayAdapter<APPEvent> {
             view = LayoutInflater.from(getContext()).inflate(R.layout.event_show,null);
             viewHolder = new ViewHolder();
             viewHolder.tv1 = view.findViewById(R.id.event_title);
+            viewHolder.tv2 = view.findViewById(R.id.source_author);
+            viewHolder.tv3 = view.findViewById(R.id.date);
             view.setTag(viewHolder);
         }else{
             view = convertView;
             viewHolder = (ViewHolder) convertView.getTag();
         }
         viewHolder.tv1.setText(event.getTitle());
+        viewHolder.tv2.setText(event.getSourceAuthor());
+        viewHolder.tv3.setText(event.getDate());
         if(event.getWatched()){
             //System.out.println("sssss");
             viewHolder.tv1.setTextColor(0xff888888);
+            viewHolder.tv2.setTextColor(0xff888888);
+            viewHolder.tv3.setTextColor(0xff888888);
 //            viewHolder.tv1.setBackgroundColor(android.R.color.black);
         } else{
             //System.out.println("AAAAAAA");
             viewHolder.tv1.setTextColor(0xff000000);
+            viewHolder.tv2.setTextColor(0xff000000);
+            viewHolder.tv3.setTextColor(0xff000000);
 //            viewHolder.tv1.setBackgroundColor(android.R.color.darker_gray);
 
         }
@@ -63,5 +71,7 @@ public class APPEventAdapter extends ArrayAdapter<APPEvent> {
 //辅助类
     class ViewHolder{
         TextView tv1;
+        TextView tv2;
+        TextView tv3;
     }
 }

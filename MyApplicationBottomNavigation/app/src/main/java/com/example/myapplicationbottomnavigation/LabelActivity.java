@@ -40,7 +40,6 @@ public class LabelActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("user", Context.MODE_PRIVATE);
         list.clear();
         String label = sharedPreferences.getString("label","news paper");
-        System.out.println(label+"haha");
         Scanner scanner = new Scanner(label);
         int i = 0;
         while (scanner.hasNext()){
